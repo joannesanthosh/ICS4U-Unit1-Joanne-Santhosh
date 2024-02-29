@@ -10,20 +10,20 @@ import { createPrompt } from 'bun-promptx'
 
 // input
 const randomNumber = Math.floor(Math.random() * 6)
-let guesses = 0
+let guesses: number = 0
 
 // while loop
 while (true) {
-  const userGuessString = prompt(userGuessString.value || "-1")
+  const userGuessString = prompt("Guess a number between 1 - 6:")
   if (userGuessString == null) {
     break 
 }
   const userGuessInt = parseInt(userGuessString)
-  if (isNaN(userGuessInt) == true || massOfObject < 0) {
+  if (isNaN(userGuessInt) == true || userGuessInt < 0) {
    console.log("\nInvalid input.")
 } else {
-// process using while loop
-guesses ++
+// process
+guesses++
 if (userGuessInt !== randomNumber) {
   if (userGuessInt < randomNumber) {
     console.log("Your guess is too low. Try again.")
@@ -31,7 +31,9 @@ if (userGuessInt !== randomNumber) {
     console.log("Your guess is too high. Try again.")
   }
 } else {
-  console.log("You correctly guessed the number ${randomNumber} in ${guesses} tries!")
+  console.log(`You correctly guessed the number in ${guesses} tries!`)
   break
+  }
+ }
 }
 console.log("\nDone.")

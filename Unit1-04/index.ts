@@ -10,7 +10,7 @@ import { createPrompt } from 'bun-promptx'
 
 // input
 const randomNumber = Math.floor(Math.random() * 6)
-let guesses = number = 0
+let guesses = 0
 
 // while loop
 while (true) {

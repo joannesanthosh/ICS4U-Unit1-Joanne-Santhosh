@@ -1,4 +1,4 @@
-/*This is a program that generates a random number for the user to guess
+/*This is a program that uses a function to calculate the length of wood
 *
 *@author  Joanne Santhosh
 *@version 1.0

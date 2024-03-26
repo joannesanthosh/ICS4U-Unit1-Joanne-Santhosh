@@ -10,14 +10,14 @@ import { writeFileSync } from "fs"
 
 function generateGaussian(mean, std){
   // https://discourse.psychopy.org/t/javascript-gaussian-function/17724/2
-  var _2PI = Math.PI * 2;
-  var u1 = Math.random();
-  var u2 = Math.random();
+  var _2PI = Math.PI * 2
+  var u1 = Math.random()
+  var u2 = Math.random()
 
-  var z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(_2PI * u2);
-  var z1 = Math.sqrt(-2.0 * Math.log(u1)) * Math.sin(_2PI * u2);
+  var z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(_2PI * u2)
+  var z1 = Math.sqrt(-2.0 * Math.log(u1)) * Math.sin(_2PI * u2)
 
-  return z0 * std + mean;
+  return z0 * std + mean
 }
 
 // Add first row
